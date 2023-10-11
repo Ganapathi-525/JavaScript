@@ -1,0 +1,2 @@
+# JavaScript
+Only JavaScript
