@@ -25,6 +25,18 @@ for(let i=1;i<=20;i++){
     }
 }
 
+let r=31;
+
+
+while(r>=0){
+
+    if(r%2!==0){
+
+        // console.log(r,"is Odd number")
+    }
+    r--;
+}
+
 
 
 
@@ -37,9 +49,12 @@ let i=1
 let sum=0;
 
 do{
-  
-   sum=sum+i;
-   i++;
+    let a=10
+i++;
+sum=sum+i;
+ console.log(a)
+//    i++;
 } while(i<=10);
+
 
 console.log("sum is ",sum)
