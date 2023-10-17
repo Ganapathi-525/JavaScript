@@ -258,6 +258,8 @@ console.log(greeting);
 let name2="gana";
 let guna2="ghan";
 
+// let r=
+
 
 
 
