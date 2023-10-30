@@ -255,10 +255,7 @@ console.log(greeting);
 // 14. String Comparison
 // localeCompare(compareString): Compares two strings and returns a number indicating their sort order.
 
-let name2="gana";
-let guna2="ghan";
 
-// let r=
 
 
 
