@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./project1.js"></script>
+    <style>
+
+        #maindiv{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            /* justify-items: center; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+        #maindiv>div{
+            border: 5px solid black;
+
+            justify-content:center;
+            align-items: center;
+
+            height: auto;
+            border-radius: 20px;
+        }
+
+        button{
+            padding: 20px;
+            margin-left: 70px;
+            border-radius: 20%;
+            width: 200px;
+        }
+    </style>
+</head>
+<body id="body">
+      
+    <button id="all">All</button>
+    <button id="men">Mens</button>
+    <button id="women">Women</button>
+    <button id="ele">electronics</button>
+    <button id="jewe">jewelery</button>
+
+
+    <div id="maindiv">
+      
+    </div>
+</body>
+</html>

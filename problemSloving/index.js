@@ -58,12 +58,12 @@ function sum1(x,y){
     }
    }
 
-   console.log(tostring("ganesh","Ganesh"));
+  //  console.log(tostring("ganesh","Ganesh"));
 
 // 9.Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function.
 let name=(x)=>`Hi man ${x}`;
 
-console.log(name("ganesh"))
+// console.log(name("ganesh"))
 
 // 10.Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
 function phone(array){
@@ -91,8 +91,8 @@ function phone(array){
 return ph;
 }
 let a1=[5,5,5,5,5,5,5,5,5,5]
-console.log(phone(a1))
-console.log(a1.length)
+// console.log(phone(a1))
+// console.log(a1.length)
 
 // Create a function that returns an array of strings sorted by length in ascending order.
 // Example:
@@ -129,7 +129,7 @@ function findLargestNums(x){
 }
 let largest=[[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]
 
-console.log(findLargestNums(largest))
+// console.log(findLargestNums(largest))
 
 // Create a function that takes an array of numbers and returns the second largest number.
 // Example:
@@ -165,7 +165,7 @@ let c=0;
 }
 
 
-console.log(uniquenum(a2))
+// console.log(uniquenum(a2))
 // Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
 // Example:
 
@@ -271,3 +271,39 @@ console.log(uniquenum(a2))
 
 // 			Input: [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10] , no find=7
 // 			Output: 7 present 2 times.
+
+
+let values = [
+  {
+    id: 1,
+    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    price: 109.95,
+    description:
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    category: "men's clothing",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    rating: {
+      rate: 3.9,
+      count: 120,
+    },
+  },
+
+  {
+    id: 2
+    ,
+    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    price: 109.95,
+    description:
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    category: "men's clothing",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    rating: {
+      rate: 3.9,
+      count: 120,
+    },
+  },
+  ]
+
+  let arr=[{},2,3,4]
+  
+  console.log(values[0].id)
