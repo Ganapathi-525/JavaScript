@@ -566,8 +566,17 @@ var mobileData=[
 
 
 
+    var AddtocartData=[];
+
+
+    
 
 function display(x){
+
+
+   
+
+
 x.map((val,ind,arr)=>{
     let card=document.createElement("div");
     
@@ -611,16 +620,29 @@ x.map((val,ind,arr)=>{
       AddTocart.innerText="Add To Cart"
       AddTocart.addEventListener("click",()=>{
 
-        var AddtocartData=[]||JSON.parse(localStorage.getItem("AddtoCartData"))
+       // AddtocartData=JSON.parse(localStorage.getItem("AddtoCartData"))
 
-        // console.log("Gana")
+         console.log("Gana")
         
        
+      
+    //   console.log(n)
+      
+    console.log(val)
+
+       
+
+       
+
+
         AddtocartData.push(val);
+      
 
         console.log(AddtocartData)
-
         localStorage.setItem("AddtoCartData",JSON.stringify(AddtocartData))
+
+
+
       })
 21
     card.append(img,title,price,discountPercentage,brand,seemore,AddTocart);
@@ -633,9 +655,25 @@ x.map((val,ind,arr)=>{
 })
 
 }
+
+
+
+
+
+
 // console.log(maindiv)
 
+
+
+
+
+
+
+
 display(mobileData)
+
+
+
 
 
 
@@ -811,6 +849,8 @@ AddToCart.addEventListener("click",()=>{
 // window.alert("Added to your cart");
     window.location.assign("./addtocart.html")
 })
+
+
 
 
     

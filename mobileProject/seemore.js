@@ -71,7 +71,7 @@ let img1=document.getElementById("img1");
 
     window.location.assign("./index.html")
 
-    console.log("gana")
+    // console.log("gana")
   })
 
 

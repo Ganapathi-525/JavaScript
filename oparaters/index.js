@@ -60,7 +60,8 @@ var age=+prompt("Enter the age:")
 
 age>=18 ? alert("your are elegible for marriage"):alert("Your are not elegible for marriage");
 
-
+// document.write(age)
+ 
 var deg=+prompt("Enter the temparature");
 
 var f=(deg * 9/5) +32;

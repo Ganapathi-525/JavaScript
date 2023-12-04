@@ -75,12 +75,15 @@ function phone(array){
         ph+=array[i]
       }
       else if(i==3){
+       
         ph+=") "
+        ph+=array[i]
+        
       }
-      else if(i>4 && i<6){
+      else if(i>4 && i<5){
           ph+=array[i];
     }
-    else if(i==6){
+    else if(i==5){
 
         ph+= array[i]+"-"
     }
@@ -90,13 +93,46 @@ function phone(array){
 }
 return ph;
 }
-let a1=[5,5,5,5,5,5,5,5,5,5]
-// console.log(phone(a1))
+let a1=[0,1,2,3,4,5,6,7,8,9]
+console.log(phone(a1))
 // console.log(a1.length)
 
 // Create a function that returns an array of strings sorted by length in ascending order.
 // Example:
 // sortByLength(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
+
+let sortb=["a", "ccc", "dddd", "bb"];
+ 
+let u=[];
+
+for( x of sortb){
+
+  u.push(x.length)
+}
+
+//console.log(u)
+
+let q=u.sort((a,b)=>{
+  return a-b
+})
+
+//console.log(q)
+
+let k=[];
+
+for(let i=0;i<q.length;i++){
+
+
+  for(let j=0;j<sortb.length;j++){
+if(sortb[j].length==q[i]){
+  k.push(sortb[j])
+}
+
+}
+}
+
+//console.log(k)
+
 
 // Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each.
 // Example:
@@ -117,7 +153,7 @@ function findLargestNums(x){
        let max=-Infinity
         for(let j=0;j<x[i].length;j++){
            
-            if(x[i][j]>max){
+            if(max<x[i][j]){
                 max=x[i][j];
             }
 
@@ -134,6 +170,25 @@ let largest=[[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]
 // Create a function that takes an array of numbers and returns the second largest number.
 // Example:
 // secondLargest([10, 40, 30, 20, 50]) ➞ 40
+
+
+
+function secondLargest(arr){
+
+  arr.sort(function(a,b){
+
+    return b-a
+  })
+
+  return arr;
+};
+
+let r=[10, 40, 30, 20, 50]
+// r.sort(function(a,b){
+
+// })
+
+// console.log(r[1])
 
 // Create a function that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
 // Example:
@@ -165,7 +220,7 @@ let c=0;
 }
 
 
-// console.log(uniquenum(a2))
+//console.log(uniquenum(a2))
 // Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
 // Example:
 
@@ -174,12 +229,68 @@ let c=0;
 // Create a function that takes a string and returns the number (count) of vowels contained within it.
 // Example:
 
+
+function vowels(d){
+
+  let c=0;
+  for(let i=0;i<d.length;i++){
+
+
+    if(d[i]=="a"||d[i]=="e"||d[i]=="i" ||d[i]=="o"||d[i]=="u"){
+      c++;
+  
+  }
+  }
+
+  return c
+
+
+}
+let d="Celebration"
+
+//console.log(vowels(d))
+
+
 // countVowels("Celebration") ➞ 5
 
 // Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
 // Example:
 // reverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"
 
+
+// function revApla(s){
+
+let s="Happy Birthday"
+
+  let str='';
+
+  let a="abcdefghijklmnopqrstuvwxyz";
+
+  let A='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+   
+  // let str=''1
+  for(x in s){
+  //  console.log(x)
+    for( c in A){
+
+// console.log(A[c])
+     if(s[x]==a[c]){
+
+      str+=A[c];
+     }else if(s[x]==A[c]){
+      str+=a[c]
+     }
+
+
+    }
+
+
+  }
+
+// console.log(str)
+  // console.log(A.length)
+// }
+// revApla()
 //   Take one integer n, loop till n and pass each value to a function, create a function that takes one integer parameter, and multiply with 2 in every integer.
 
 // 			Input:      n=5
@@ -228,6 +339,15 @@ let c=0;
 // 			Output: 5 ^ 3 = 125
 // 			Explanation: 5 x 5 x 5 = 125
 
+let powe=1;
+let ne=5;
+let p=3;
+for(let i=1;i<=p;i++){
+
+powe=powe*ne
+}
+console.log(powe)
+
 //  26. Program to Check Whether a Number is Prime or Not
 
 // 			Input: 9
@@ -249,6 +369,26 @@ let c=0;
 
 // 			Input:  n=5(length of array), arr= [5,3,1,4]
 // 			Output: 2 is missing
+let t1=[5,3,1,4]
+for(let i=0;i<=5-1;i++){
+
+
+  for(let j=1;j<=5-1;j++){
+
+
+    if(t1[i]!==j+1){
+
+      // console.log(i)
+      continue
+    }else{
+  
+      //console.log(j+1)
+    }
+
+    
+  }
+ 
+}
 
 // 		Using loop only(you can not use predefined function)
 
@@ -273,37 +413,43 @@ let c=0;
 // 			Output: 7 present 2 times.
 
 
-let values = [
-  {
-    id: 1,
-    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    price: 109.95,
-    description:
-      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    category: "men's clothing",
-    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    rating: {
-      rate: 3.9,
-      count: 120,
-    },
-  },
+// let values = [
+//   {
+//     id: 1,
+//     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+//     price: 109.95,
+//     description:
+//       "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+//     category: "men's clothing",
+//     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+//     rating: {
+//       rate: 3.9,
+//       count: 120,
+//     },
+//   },
 
-  {
-    id: 2
-    ,
-    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    price: 109.95,
-    description:
-      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    category: "men's clothing",
-    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    rating: {
-      rate: 3.9,
-      count: 120,
-    },
-  },
-  ]
+//   {
+//     id: 2
+//     ,
+//     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+//     price: 109.95,
+//     description:
+//       "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+//     category: "men's clothing",
+//     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+//     rating: {
+//       rate: 3.9,
+//       count: 120,
+//     },
+//   },
+//   ]
 
-  let arr=[{},2,3,4]
-  
-  console.log(values[0].id)
+
+// let a=document.write("Ganapathi");
+
+
+let t=[1,3,4,5,6];
+let o=t.join(',')
+// console.log(o)
+
+
